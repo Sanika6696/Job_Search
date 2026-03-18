@@ -1,0 +1,91 @@
+# ─────────────────────────────────────────────
+# Job Search Automation — Configuration
+# ─────────────────────────────────────────────
+
+# Job titles to search across all boards
+job_titles:
+  - "Data Analyst"
+  - "Growth Analyst"
+  - "Marketing Analyst"
+  - "Product Analyst"
+  - "Lifecycle Marketing"
+  - "Digital Marketing Analyst"
+
+# Where to search
+search:
+  locations:
+    - "remote"
+    - "New York, NY"
+    - "San Francisco, CA"
+    - "Austin, TX"
+    - "Chicago, IL"
+  country_code: "US"
+  job_type: "fulltime"          # fulltime | parttime | contract
+  results_per_title: 15         # jobs to fetch per title per board
+  min_match_score: 60           # 0-100 — only surface jobs above this threshold
+
+# Resume — fill in your details or point to a PDF path
+resume:
+  path: "resume.pdf"            # place your resume PDF here
+  # Paste your raw text resume below as a fallback if no PDF is present
+  raw_text: ""
+
+# Outreach settings
+outreach:
+  require_approval: true        # ALWAYS prompt before sending
+  your_name: ""                 # e.g. "Sanika Sharma"
+  your_linkedin_url: ""         # e.g. "https://linkedin.com/in/sanika"
+  your_email: ""                # e.g. "sanika@email.com"
+  email_signature: |
+    Best,
+    {your_name}
+    {your_linkedin_url}
+
+# Notion integration (optional — set NOTION_API_KEY env var)
+notion:
+  enabled: false
+  database_id: ""               # Notion DB to track applications
+
+# Job boards to scrape (Indeed is built-in via MCP; others via scraping)
+job_boards:
+  indeed: true
+  linkedin: true
+  glassdoor: true
+  builtin: true                 # builtin.com — tech/startup roles
+  wellfound: true               # wellfound.com — startups
+  lever: true                   # lever.co ATS listings
+  greenhouse: true              # greenhouse.io ATS listings
+  simplyhired: true
+  ziprecruiter: true
+
+# Keywords to boost match score when found in job description
+boost_keywords:
+  - "SQL"
+  - "Python"
+  - "Excel"
+  - "Tableau"
+  - "Power BI"
+  - "Looker"
+  - "Google Analytics"
+  - "A/B testing"
+  - "cohort analysis"
+  - "funnel analysis"
+  - "retention"
+  - "segmentation"
+  - "email marketing"
+  - "CRM"
+  - "Salesforce"
+  - "HubSpot"
+  - "Marketo"
+  - "dbt"
+  - "data storytelling"
+  - "stakeholder management"
+
+# Keywords that lower match score (deal-breakers)
+negative_keywords:
+  - "10+ years"
+  - "15+ years"
+  - "Director"
+  - "VP"
+  - "C-level"
+  - "security clearance required"
