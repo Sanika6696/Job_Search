@@ -1,0 +1,19 @@
+# Core
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+pyyaml>=6.0.1
+
+# Resume parsing
+pdfplumber>=0.10.0
+PyPDF2>=3.0.0          # fallback if pdfplumber not available
+
+# Optional — Notion integration
+# (used only when notion.enabled: true in config.yaml)
+# requests already handles Notion REST API calls
+
+# Optional — email sending
+# smtplib is in Python standard library; no extra install needed
+
+# Dev / testing
+pytest>=8.0.0
